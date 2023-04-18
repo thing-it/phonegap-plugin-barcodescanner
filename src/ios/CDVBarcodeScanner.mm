@@ -790,6 +790,11 @@ parentViewController:(UIViewController*)parentViewController
     [super viewDidAppear:animated];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [self cancelButtonPressed:nil];
+    [super viewDidAppear:animated];
+}
+
 - (AVCaptureVideoOrientation)interfaceOrientationToVideoOrientation:(UIInterfaceOrientation)orientation {
     switch (orientation) {
         case UIInterfaceOrientationPortrait:
